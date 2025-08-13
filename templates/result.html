@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Insurance Cost Prediction</h1>
+    <h2>The estimated insurance charge is: ${{ prediction }}</h2>
+
+    <div>
+        <h3>Insurance Charges by Age</h3>
+        <div id="plot1"></div>
+    </div>
+    <div>
+        <h3>Charges by Age and Smoker Status</h3>
+        <div id="plot2"></div>
+    </div>
+
+    <script>
+        var plot1 = {{ plot1 | safe }};
+        Plotly.newPlot('plot1', plot1.data, plot1.layout);
+
+        var plot2 = {{ plot2 | safe }};
+        Plotly.newPlot('plot2', plot2.data, plot2.layout);
+    </script>
+</body>
+</html>

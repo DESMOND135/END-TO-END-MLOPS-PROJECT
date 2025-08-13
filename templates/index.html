@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Cost Prediction</title>
+</head>
+<body>
+    <h1>Insurance Cost Prediction</h1>
+    <form action="/predict" method="post">
+        <label>Age:</label>
+        <input type="number" name="age" min="18" max="100" value="30" required><br><br>
+
+        <label>Sex:</label>
+        <select name="sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+
+        <label>BMI:</label>
+        <input type="number" name="bmi" step="0.1" value="25.0" required><br><br>
+
+        <label>Smoker:</label>
+        <select name="smoker">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select><br><br>
+
+        <label>Region:</label>
+        <select name="region">
+            <option value="Northeast">Northeast</option>
+            <option value="Northwest">Northwest</option>
+            <option value="Southeast">Southeast</option>
+            <option value="Southwest">Southwest</option>
+        </select><br><br>
+
+        <label>Children:</label>
+        <input type="number" name="children" min="0" max="10" value="1"><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
