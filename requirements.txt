@@ -1,11 +1,14 @@
-Flask
-joblib
-numpy
 pandas
+numpy
+seaborn
+matplotlib
 scikit-learn
-plotly
+catboost
+xgboost
 Flask
-gunicorn
+dill
+
+#-e .
 
 
 

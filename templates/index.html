@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Insurance Cost Prediction</title>
+    <title>Student Exam Performance Indicator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Insurance Cost Prediction</h1>
-    <form action="/predict" method="post">
-        <label>Age:</label>
-        <input type="number" name="age" min="18" max="100" value="30" required><br><br>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Exam Performance Predictor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">Prediction Form</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <label>Sex:</label>
-        <select name="sex">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-        </select><br><br>
+    <!-- Main Content -->
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">Welcome to Student Exam Performance Indicator</h1>
+        <p class="mb-4">Predict a student's exam score based on demographic and academic information.</p>
+        <a href="{{ url_for('home') }}" class="btn btn-primary btn-lg">Go to Prediction Form</a>
+    </div>
 
-        <label>BMI:</label>
-        <input type="number" name="bmi" step="0.1" value="25.0" required><br><br>
-
-        <label>Smoker:</label>
-        <select name="smoker">
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-        </select><br><br>
-
-        <label>Region:</label>
-        <select name="region">
-            <option value="Northeast">Northeast</option>
-            <option value="Northwest">Northwest</option>
-            <option value="Southeast">Southeast</option>
-            <option value="Southwest">Southwest</option>
-        </select><br><br>
-
-        <label>Children:</label>
-        <input type="number" name="children" min="0" max="10" value="1"><br><br>
-
-        <button type="submit">Predict</button>
-    </form>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
